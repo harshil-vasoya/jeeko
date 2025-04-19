@@ -391,7 +391,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image src="/images/farming-scene.jpg" alt="Indian farming scene" fill className="object-cover" />
+              <Image src="/images/about.png" alt="Indian farming scene" fill className="object-cover" />
             </div>
           </div>
         </div>
