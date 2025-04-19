@@ -35,7 +35,7 @@ export default function GeneratorsPage() {
               <h2 className="text-2xl font-bold mb-4">Why Choose Jeeko Generators?</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -59,7 +59,7 @@ export default function GeneratorsPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -81,7 +81,7 @@ export default function GeneratorsPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -105,7 +105,7 @@ export default function GeneratorsPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"

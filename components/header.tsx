@@ -21,6 +21,11 @@ export function Header() {
     return pathname === path || pathname.startsWith(`${path}/`)
   }
 
+  // Close mobile menu when clicking any link
+  const handleLinkClick = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
       <div className="container flex h-16 items-center justify-between">
@@ -41,7 +46,7 @@ export function Header() {
               "text-sm font-medium transition-colors py-2 md:py-0 relative group",
               isActive("/") ? "text-red-600 font-semibold" : "text-gray-600 hover:text-red-600",
             )}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={handleLinkClick}
           >
             Home
             {isActive("/") && (
@@ -54,7 +59,7 @@ export function Header() {
               "text-sm font-medium transition-colors py-2 md:py-0 relative group",
               isActive("/about") ? "text-red-600 font-semibold" : "text-gray-600 hover:text-red-600",
             )}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={handleLinkClick}
           >
             About
             {isActive("/about") && (
@@ -80,40 +85,56 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className={cn(
-                    "w-full",
-                    isActive("/products") && "bg-red-50 text-red-600"
-                  )}>
+                  <Link 
+                    href="/products" 
+                    className={cn(
+                      "w-full",
+                      isActive("/products") && "bg-red-50 text-red-600"
+                    )}
+                    onClick={handleLinkClick}
+                  >
                     All Products
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products/generators" className={cn(
-                    "w-full flex items-center justify-between",
-                    isActive("/products/generators") && "bg-red-50 text-red-600"
-                  )}>
+                  <Link 
+                    href="/products/generators" 
+                    className={cn(
+                      "w-full flex items-center justify-between",
+                      isActive("/products/generators") && "bg-red-50 text-red-600"
+                    )}
+                    onClick={handleLinkClick}
+                  >
                     <span>Generators</span>
                     <span className="bg-red-100 text-red-600 text-xs px-2 py-0.5 rounded">Jeeko</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products/water-pumps" className={cn(
-                    "w-full flex items-center justify-between",
-                    isActive("/products/water-pumps") && "bg-red-50 text-red-600"
-                  )}>
+                  <Link 
+                    href="/products/water-pumps" 
+                    className={cn(
+                      "w-full flex items-center justify-between",
+                      isActive("/products/water-pumps") && "bg-green-50 text-green-600"
+                    )}
+                    onClick={handleLinkClick}
+                  >
                     <span>Water Pumps</span>
-                    <span className="bg-red-100 text-red-600 text-xs px-2 py-0.5 rounded">
+                    <span className="bg-green-100 text-green-600 text-xs px-2 py-0.5 rounded">
                       Kishan King
                     </span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products/tiller-machines" className={cn(
-                    "w-full flex items-center justify-between",
-                    isActive("/products/tiller-machines") && "bg-red-50 text-red-600"
-                  )}>
+                  <Link 
+                    href="/products/tiller-machines" 
+                    className={cn(
+                      "w-full flex items-center justify-between",
+                      isActive("/products/tiller-machines") && "bg-green-50 text-green-600"
+                    )}
+                    onClick={handleLinkClick}
+                  >
                     <span>Tiller Machines</span>
-                    <span className="bg-red-100 text-red-600 text-xs px-2 py-0.5 rounded">
+                    <span className="bg-green-100 text-green-600 text-xs px-2 py-0.5 rounded">
                       Kishan King
                     </span>
                   </Link>
@@ -128,7 +149,7 @@ export function Header() {
               "text-sm font-medium transition-colors py-2 md:py-0 relative group",
               isActive("/contact") ? "text-red-600 font-semibold" : "text-gray-600 hover:text-red-600",
             )}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={handleLinkClick}
           >
             Contact
             {isActive("/contact") && (
@@ -138,13 +159,13 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Button asChild variant="outline" className="hidden md:flex border-red-600 text-red-600 hover:bg-red-50">
-            <Link href="/contact">
+            <Link href="/contact" onClick={handleLinkClick}>
               <Phone className="mr-2 h-4 w-4" />
               Contact Us
             </Link>
           </Button>
           <Button asChild className="hidden md:flex bg-red-600 hover:bg-red-700">
-            <Link href="/products">Explore Products</Link>
+            <Link href="/products" onClick={handleLinkClick}>Explore Products</Link>
           </Button>
           <Button
             variant="outline"
