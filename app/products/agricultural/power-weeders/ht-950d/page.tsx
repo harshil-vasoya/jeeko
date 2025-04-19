@@ -193,9 +193,19 @@ export default function HT950DPage() {
               <div className="relative h-48">
                 <Image 
                   src="/images/power-weeder-ht1050d.jpg" 
-                  alt="Kishan
-I'll help you generate product and product detail pages for all the products you've listed in the three categories: generators, water pumps, and tiller machines.
-
-Let me create the water pump product detail page template first:
-
-\
+                  alt="Kishan King HT1050D Power Weeder" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">HT1050D Power Weeder</h3>
+                <p className="text-gray-600">10.5 HP Diesel Engine</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
