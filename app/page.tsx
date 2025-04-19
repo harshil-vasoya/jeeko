@@ -104,7 +104,7 @@ export default function Home() {
                   Specialized farming equipment designed to enhance productivity and efficiency for Indian farmers.
                 </p>
                 <Button asChild variant="outline" className="w-full">
-                  <Link href="/products/agricultural" className="flex items-center justify-center">
+                  <Link href="/products/tiller-machines" className="flex items-center justify-center">
                     View Equipment
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Link>
