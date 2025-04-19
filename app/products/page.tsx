@@ -83,13 +83,37 @@ export default function ProductsPage() {
         </div>
 
         <Tabs defaultValue="all" className="w-full">
-          <div className="flex justify-center mb-8">
-            <TabsList className="grid w-full max-w-md grid-cols-4">
-              <TabsTrigger value="all">All Products</TabsTrigger>
-              <TabsTrigger value="generators">Generators</TabsTrigger>
-              <TabsTrigger value="water-pumps">Water Pumps</TabsTrigger>
-              <TabsTrigger value="tiller-machines">Tiller Machines</TabsTrigger>
-            </TabsList>
+          <div className="mb-8">
+            <div className="overflow-x-auto pb-2 -mx-4 px-4">
+              <div className="min-w-max">
+                <TabsList className="inline-flex w-auto bg-gray-100 rounded-lg p-0.5">
+                  <TabsTrigger 
+                    value="all" 
+                    className="data-[state=active]:bg-white data-[state=active]:text-red-600 data-[state=active]:shadow-sm rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium transition-all whitespace-nowrap"
+                  >
+                    All
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="generators" 
+                    className="data-[state=active]:bg-white data-[state=active]:text-red-600 data-[state=active]:shadow-sm rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium transition-all whitespace-nowrap"
+                  >
+                    Generators
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="water-pumps" 
+                    className="data-[state=active]:bg-white data-[state=active]:text-green-600 data-[state=active]:shadow-sm rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium transition-all whitespace-nowrap"
+                  >
+                    Water Pumps
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="tiller-machines" 
+                    className="data-[state=active]:bg-white data-[state=active]:text-green-600 data-[state=active]:shadow-sm rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium transition-all whitespace-nowrap"
+                  >
+                    Tiller Machines
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+            </div>
           </div>
 
           <TabsContent value="all" className="space-y-8">

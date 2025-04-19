@@ -9,7 +9,7 @@ import { notFound } from "next/navigation"
 export default function GeneratorDetailPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
   const product = generators[slug as keyof typeof generators]
-
+  console.log(product)
   // If product not found, return 404
   if (!product) {
     notFound()
